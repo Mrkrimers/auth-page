@@ -1,0 +1,225 @@
+@font-face {
+  font-family: "Poppins";
+  src: url(../font/Poppins-Regular.ttf) format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(../font/Poppins-Medium.ttf) format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(../font/Poppins-SemiBold.ttf) format("truetype");
+  font-weight: 600;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins";
+  font-style: normal;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: auto;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.preview {
+  background-color: #E2F0FF;
+  padding: 200px 120px;
+}
+.preview .img {
+  background-image: url(../assets/1.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 525px;
+  height: 390px;
+}
+.preview h1 {
+  width: 400px;
+  font: 600 26px "Poppins";
+  color: #292731;
+  margin: 20px auto;
+  text-align: center;
+}
+.preview p {
+  width: 400px;
+  font: 400 16px "Poppins";
+  color: #455360;
+  margin: auto;
+  text-align: center;
+}
+
+.login {
+  padding: 200px 120px;
+  background-color: #F5F5F5;
+}
+.login .welcome .imgHand {
+  background-image: url(../assets/hand.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 36px;
+  height: 36px;
+}
+.login .welcome .welcome h1 {
+  font: 600 30px "Poppins";
+  color: #292731;
+  margin: 12px auto 5px;
+}
+.login .welcome .welcome p {
+  font: 400 16px "Poppins";
+  color: #292731;
+}
+
+.registration {
+  margin-top: 45px;
+}
+.registration .help {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.registration .help p {
+  font: 500 16px "Poppins";
+  color: #455360;
+}
+.registration .help .imgInfo {
+  background-image: url(../assets/information.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 16px;
+  height: 16px;
+  margin: 35px 0 10px;
+}
+.registration .inpOne input {
+  width: 440px;
+  height: 40px;
+  border: 0.8px solid grey;
+  background: #ECF2F7;
+  border-radius: 5px;
+  padding-left: 20px;
+  outline: none;
+}
+.registration .inpOne input::-webkit-input-placeholder {
+  font: 400 16px "Poppins";
+  color: #7B8389;
+}
+.registration .inpOne input::-moz-placeholder {
+  font: 400 16px "Poppins";
+  color: #7B8389;
+}
+.registration .inpOne input:-ms-input-placeholder {
+  font: 400 16px "Poppins";
+  color: #7B8389;
+}
+.registration .inpOne input::-ms-input-placeholder {
+  font: 400 16px "Poppins";
+  color: #7B8389;
+}
+.registration .inpOne input::placeholder {
+  font: 400 16px "Poppins";
+  color: #7B8389;
+}
+.registration p {
+  font: 500 16px "Poppins";
+  color: #455360;
+  margin: 30px 0 10px;
+}
+.registration .inpTwo input {
+  width: 440px;
+  height: 40px;
+  border: 0.8px solid grey;
+  background: #ECF2F7;
+  border-radius: 5px;
+  padding-left: 20px;
+  outline: none;
+}
+.registration .inpTwo input::-webkit-input-placeholder {
+  font: 400 16px "Poppins";
+  color: #7B8389;
+}
+.registration .inpTwo input::-moz-placeholder {
+  font: 400 16px "Poppins";
+  color: #7B8389;
+}
+.registration .inpTwo input:-ms-input-placeholder {
+  font: 400 16px "Poppins";
+  color: #7B8389;
+}
+.registration .inpTwo input::-ms-input-placeholder {
+  font: 400 16px "Poppins";
+  color: #7B8389;
+}
+.registration .inpTwo input::placeholder {
+  font: 400 16px "Poppins";
+  color: #7B8389;
+}
+.registration .inpThree input {
+  width: 440px;
+  height: 40px;
+  border: 0.8px solid grey;
+  background: #ECF2F7;
+  border-radius: 5px;
+  padding-left: 20px;
+  outline: none;
+}
+.registration .inpThree input::-webkit-input-placeholder {
+  font: 400 16px "Poppins";
+  color: #7B8389;
+}
+.registration .inpThree input::-moz-placeholder {
+  font: 400 16px "Poppins";
+  color: #7B8389;
+}
+.registration .inpThree input:-ms-input-placeholder {
+  font: 400 16px "Poppins";
+  color: #7B8389;
+}
+.registration .inpThree input::-ms-input-placeholder {
+  font: 400 16px "Poppins";
+  color: #7B8389;
+}
+.registration .inpThree input::placeholder {
+  font: 400 16px "Poppins";
+  color: #7B8389;
+}
+.registration .btn {
+  background: #4C70FF;
+  border-radius: 8px;
+  text-align: center;
+  padding: 12px 0;
+  margin: 40px 0 20px;
+  font: 500 20px "Poppins";
+  color: #FFFFFF;
+}
+
+.jump {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.jump p {
+  font: 500 16px "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #292731;
+}
+.jump .sign {
+  color: #66BCE8;
+  margin-left: 5px;
+}
