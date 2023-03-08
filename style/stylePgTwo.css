@@ -105,7 +105,7 @@ main {
 .registration .inpOne input {
   width: 440px;
   height: 40px;
-  border: 0.8px solid grey;
+  border: 2px solid black;
   background: #ECF2F7;
   border-radius: 5px;
   padding-left: 20px;
@@ -139,7 +139,7 @@ main {
 .registration .inpTwo input {
   width: 440px;
   height: 40px;
-  border: 0.8px solid grey;
+  border: 2px solid black;
   background: #ECF2F7;
   border-radius: 5px;
   padding-left: 20px;
@@ -168,7 +168,7 @@ main {
 .registration .inpThree input {
   width: 440px;
   height: 40px;
-  border: 0.8px solid grey;
+  border: 2px solid black;
   background: #ECF2F7;
   border-radius: 5px;
   padding-left: 20px;
