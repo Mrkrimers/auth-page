@@ -23,7 +23,7 @@ const redBorderError = (error) => {
 
 button.addEventListener(`click`, () => {
     try {
-        isValid( inpOne, inpTwo);
+        isValid(inpOne, inpTwo);
 
         alert(`You have successfully authorized in the system`);
         inpOne.value = ``;
@@ -39,22 +39,19 @@ button.addEventListener(`click`, () => {
 
 
 button.addEventListener(`mouseover`, () => {
-    button.style = `border: 2px solid black; `;
+    button.style = `border: 2px solid black; background: #01104b; `;
 })
 button.addEventListener(`mouseout`, () => {
-    button.style = `border: none`;
+    button.style = `border: none; background: #4C70FF; `;
 })
 
-inpOne.addEventListener(`mouseover`, () => {
-    inpOne.style = `border: 0.8px solid grey; `;
-})
-inpOne.addEventListener(`mouseout`, () => {
-    inpOne.style = `border: 2px solid black; `;
-})
 
-inpTwo.addEventListener(`mouseover`, () => {
-    inpTwo.style = `border: 0.8px solid grey; `;
-})
-inpTwo.addEventListener(`mouseout`, () => {
-    inpTwo.style = `border: 2px solid black; `;
-})
+function borderOver(input) {
+    input.style = `border: 0.8px solid grey; `;
+}
+
+function borderOut(input) {
+    input.style = `border: 2px solid black; `;
+}
+
+
