@@ -4,60 +4,58 @@ const inpTwo = document.querySelector(`.inpTwo input`)
 const inpThree = document.querySelector(`.inpThree input`)
 
 
+const isValid = (inpOne_, inpTwo_, inpThree_) => {
+
+    if (inpOne_.value == ``) throw new Error(`ERROR! Type your E-mail`)
+    if (!/^[a-zA-Z0-9\-\_\.]+@[a-zA-Z]+.[a-zA-Z]{1,10}$/gm.test(inpOne_.value)) throw new Error(`Не корректный ввод`)
+
+    if (inpTwo_.value == ``) throw new Error(`ERROR! Type your Password`)
+    if (!/^[0-9]{8,}$/gm.test(inpTwo_.value)) throw new Error(`Только числа или пароль менее 7 чисел`)
+
+    if (inpTwo_.value != inpThree_.value) throw new Error(`Не совпадает`)
+}
+
+const redBorderError = (error) => {
+    if (error == `ERROR! Type your E-mail`) inpOne.style = `border: 2px solid red;`,
+        inpTwo.style = `border: 2px solid red;`,
+        inpThree.style = `border: 2px solid red;`;
+    if (error == `Не корректный ввод`) inpOne.style = `border: 2px solid red;`;
+    if (error == `ERROR! Type your Password`) inpTwo.style = `border: 2px solid red; `;
+    if (error == `Только числа или пароль менее 7 чисел`) inpTwo.style = `border: 2px solid red; `;
+    if (error == `Не совпадает`) inpTwo.style = `border: 2px solid red; `,
+        inpThree.style = `border: 2px solid red;`;
+}
+
+
 button.addEventListener(`click`, () => {
     try {
-
-        if (inpOne.value == ``) throw new Error(`ERROR! Type your E-mail`)
-        if (!/^[a-zA-Z0-9\-\_\.]+@[a-zA-Z]+.[a-zA-Z]{1,10}$/gm.test(inpOne.value)) throw new Error(`Не корректный ввод`)
-
-        if (inpTwo.value == ``) throw new Error(`ERROR! Type your Password`)
-        if (!/^[0-9]{8,}$/gm.test(inpTwo.value)) throw new Error(`Только числа или пароль менее 7 чисел`)
-
-        if (inpTwo.value != inpThree.value) throw new Error(`Не совпадает`)
-
+        isValid(inpOne, inpTwo, inpThree)
         alert(`You have successfully authorized in the system`);
+        inpOne.value = ``;
+        inpTwo.value = ``;
+        inpThree.value = ``;
 
     } catch (error) {
-        if (error.message == `ERROR! Type your E-mail`) inpOne.style = `border: 2px solid red;`,
-            inpTwo.style = `border: 2px solid red;`,
-            inpThree.style = `border: 2px solid red;`;
-        if (error.message == `Не корректный ввод`) inpOne.style = `border: 2px solid red;`;
-        if (error.message == `ERROR! Type your Password`) inpTwo.style = `border: 2px solid red; `;
-        if (error.message == `Только числа или пароль менее 7 чисел`) inpTwo.style = `border: 2px solid red; `;
-        if (error.message == `Не совпадает`) inpTwo.style = `border: 2px solid red; `,
-            inpThree.style = `border: 2px solid red;`;
-
+        redBorderError(error.message)
         alert(error.message)
+        inpOne.value = ``;
+        inpTwo.value = ``;
+        inpThree.value = ``;
     }
 })
 
+
 button.addEventListener(`mouseover`, () => {
-    button.style = `border: 2px solid black;`;
+    button.style = `border: 2px solid black; background: #01104b; `;
 })
 button.addEventListener(`mouseout`, () => {
-    button.style = `border: none`;
+    button.style = `border: none; background: #4C70FF; `;
 })
 
-inpOne.addEventListener(`mouseover`, () => {
-    inpOne.style = `border: 0.8px solid grey;`;
-})
-inpOne.addEventListener(`mouseout`, () => {
-    inpOne.style = `border: 2px solid black;`;
-})
-
-inpTwo.addEventListener(`mouseover`, () => {
-    inpTwo.style = `border: 0.8px solid grey;`;
-})
-inpTwo.addEventListener(`mouseout`, () => {
-    inpTwo.style = `border: 2px solid black;`;
-})
-
-inpThree.addEventListener(`mouseover`, () => {
-    inpThree.style = `border: 0.8px solid grey;`;
-})
-inpThree.addEventListener(`mouseout`, () => {
-    inpThree.style = `border: 2px solid black;`;
-})
-
-
+function borderOver(input) {
+    input.style = `border: 0.8px solid grey;`;
+}
+function borderOut(input) {
+    input.style = `border: 2px solid black;`;
+}
 
