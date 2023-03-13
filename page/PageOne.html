@@ -41,13 +41,15 @@
                 </div>
 
                 <div class="inpOne">
-                    <input placeholder="Type your e-mail or phone number" type="text">
+                    <input onmouseover="borderOver(this)" onmouseout="borderOut(this)"
+                        placeholder="Type your e-mail or phone number" type="text">
                 </div>
 
                 <p>Password</p>
 
                 <div class="inpTwo">
-                    <input placeholder="Type your password" type="text">
+                    <input onmouseover="borderOver(this)" onmouseout="borderOut(this)" placeholder="Type your password"
+                        type="text">
                 </div>
 
                 <div class="btn">Log In</div>
@@ -55,13 +57,15 @@
 
             <div class="jump">
                 <p>Don't have an account?</p>
-                <p class="sign">Sign Up</p>
+                <a href="../page/PageTwo.html">Sign Up</a>
+                <!-- <p class="sign">Sign Up</p> -->
             </div>
 
         </section>
 
     </main>
 
+    <script src="../JavaScript/pageOne.js"></script>
 </body>
 
 </html>
