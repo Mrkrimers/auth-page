@@ -4,7 +4,7 @@ const inpTwo = document.querySelector(`.inpTwo input`)
 const inpThree = document.querySelector(`.inpThree input`)
 
 
-const isValid = (inpOne_, inpTwo_, inpThree_) => {
+const isValid = async (inpOne_, inpTwo_, inpThree_) => {
 
     if (inpOne_.value == ``) throw new Error(`ERROR! Type your E-mail`)
     if (!/^[a-zA-Z0-9\-\_\.]+@[a-zA-Z]+.[a-zA-Z]{1,10}$/gm.test(inpOne_.value)) throw new Error(`Не корректный ввод`)
@@ -27,9 +27,24 @@ const redBorderError = (error) => {
 }
 
 
-button.addEventListener(`click`, () => {
+button.addEventListener(`click`, async () => {
     try {
-        isValid(inpOne, inpTwo, inpThree)
+        await isValid(inpOne, inpTwo, inpThree)
+
+        const obj = {
+            email: inpOne.value,
+            pwd: inpThree.value
+        }
+
+        const response = await fetch('http://localhost:3000/api/register', {
+            method: "POST",
+            body: JSON.stringify(obj),
+            headers: { "Content-Type": "application/json" }
+        })
+
+        const json = await response.json();
+        console.log(json);
+
         alert(`You have successfully authorized in the system`);
         inpOne.value = ``;
         inpTwo.value = ``;
