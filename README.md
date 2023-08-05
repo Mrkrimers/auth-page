@@ -8,11 +8,13 @@
 
 <p>
   used the principles of SOLID
-</p>
+  
   used native page redirection for the first time
   
   used used git features: 
   *merge *pull request *different branches
+</p>
+  
 
 ### :hammer_and_wrench: Languages and Tools :
 <div>
